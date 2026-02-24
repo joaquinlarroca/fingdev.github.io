@@ -76,50 +76,50 @@
     <section class="challenges">
       <h2>Personal Challenges</h2>
       <p>
-        Want to start contributing but don't know where to begin? These challenges are code-agnostic, 
-        they work with any language or technology:
+        Want to learn to code but don't know where to begin? These challenges are language-agnostic, 
+        pick any programming language and start learning:
       </p>
       <div class="challenges-grid">
         <div class="challenge-card">
-          <h3>Challenge 1: README Translator</h3>
+          <h3>Challenge 1: Hello World</h3>
           <p>
-            Pick an open source project you like and translate its README to Spanish. 
-            It's a great way to contribute and learn about the project.
+            Write a program that prints "Hello, World!" to the screen. 
+            This is the classic first program in any language. Research why this tradition exists.
           </p>
         </div>
         <div class="challenge-card">
-          <h3>Challenge 2: Bug Hunter</h3>
+          <h3>Challenge 2: Calculator</h3>
           <p>
-            Browse the "Issues" tab of any repository. Try to reproduce a bug 
-            and if you can, suggest a solution. You don't need code to get started.
+            Build a simple calculator that can add, subtract, multiply, and divide two numbers.
+            Learn about functions, user input, and basic arithmetic operations.
           </p>
         </div>
         <div class="challenge-card">
-          <h3>Challenge 3: Documentation Hero</h3>
+          <h3>Challenge 3: Number Guessing Game</h3>
           <p>
-            Find something in a project that isn't documented and add a usage example 
-            or explain how it works. Documentation always needs improvements.
+            Create a game where the computer picks a random number and you have to guess it.
+            Learn about loops, conditionals, and generating random numbers.
           </p>
         </div>
         <div class="challenge-card">
-          <h3>Challenge 4: First Issue</h3>
+          <h3>Challenge 4: Todo List</h3>
           <p>
-            Look for Issues with labels "good first issue" or "help wanted" in any repository. 
-            These are problems designed for beginners. Start with something small.
+            Build a todo list application. Learn about arrays/lists, adding/removing items,
+            and storing data. Start simple and add features as you learn.
           </p>
         </div>
         <div class="challenge-card">
-          <h3>Challenge 5: Your Own Project</h3>
+          <h3>Challenge 5: Palindrome Checker</h3>
           <p>
-            Have an idea? Create a repository, write a good README, and publish your code. 
-            It doesn't have to be perfect, it just has to exist.
+            Write a program that checks if a word is a palindrome (reads the same forwards and backwards).
+            Learn about strings, loops, and string manipulation.
           </p>
         </div>
         <div class="challenge-card">
-          <h3>Challenge 6: Code Review</h3>
+          <h3>Challenge 6: FizzBuzz</h3>
           <p>
-            Ask for read access to a repository and review others' code. 
-            You don't need to approve everything, suggesting improvements helps too.
+            The classic coding interview question. Print numbers 1-100, but for multiples of 3 print "Fizz",
+            for multiples of 5 print "Buzz", and for both print "FizzBuzz". Learn about modulo and conditionals.
           </p>
         </div>
       </div>
