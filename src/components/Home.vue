@@ -11,6 +11,37 @@
       </div>
     </section>
 
+    <section class="english-section">
+      <h2>¿Por qué todo está en inglés?</h2>
+      <p>
+        Puede parecer奇怪 (raro) ver todo en inglés en un sitio para estudiantes uruguayos. 
+        Aquí te explicamos el razonamiento:
+      </p>
+      <ul class="english-reasons">
+        <li>
+          <strong>El inglés es el idioma de la programación</strong>: 
+          La mayoría de la documentación, tutoriales y recursos están en inglés. 
+          Dominarlo te abre puertas a nivel mundial.
+        </li>
+        <li>
+          <strong>Buscar soluciones en inglés</strong>: 
+          Cuando tengas un error, el 90% de las respuestas están en Stack Overflow y documentación en inglés.
+        </li>
+        <li>
+          <strong>Preparación profesional</strong>: 
+          Las empresas tech contratan personas que pueden trabajar en inglés. 
+          Es una habilidad fundamental.
+        </li>
+        <li>
+          <strong>Comunidad global</strong>: 
+          Al contribuir a proyectos open source, vas a interactuar con personas de todo el mundo.
+        </li>
+      </ul>
+      <p class="english-tip">
+        <em>💡 Consejo: No necesitas ser fluido. Con poder leer y escribir lo básico ya es suficiente para empezar.</em>
+      </p>
+    </section>
+
     <section class="features">
       <div class="feature-card">
         <div class="feature-icon">🎯</div>
@@ -42,20 +73,109 @@
       </ul>
     </section>
 
+    <section class="challenges">
+      <h2>Desafíos Personales</h2>
+      <p>
+        ¿Querés empezar a contribuir pero no sabés por dónde? Estos desafíos son code-agnostic, 
+        funcionan con cualquier lenguaje o tecnología:
+      </p>
+      <div class="challenges-grid">
+        <div class="challenge-card">
+          <h3>🔤 Desafío 1: README Translator</h3>
+          <p>
+            Tomá un proyecto open source que te interese y traducí su README al español. 
+            Es una excelente forma de contribuir y aprender sobre el proyecto.
+          </p>
+        </div>
+        <div class="challenge-card">
+          <h3>🐛 Desafío 2: Bug Hunter</h3>
+          <p>
+            Buscá en la pestaña "Issues" de algún repositorio. Intentá reproducir un bug 
+            y si podés, sugerí una solución. No necesitás código para empezar.
+          </p>
+        </div>
+        <div class="challenge-card">
+          <h3>📝 Desafío 3: Documentation Hero</h3>
+          <p>
+            Encontrá algo en un proyecto que no esté documentado y agregá un ejemplo de uso 
+            o explicá cómo funciona. La documentación siempre necesita mejoras.
+          </p>
+        </div>
+        <div class="challenge-card">
+          <h3>🎨 Desafío 4: First Issue</h3>
+          <p>
+            BuscáIssues con标签 "good first issue" o "help wanted" en cualquier repositorio. 
+            Son problemas diseñados para principiantes. Empezá con algo pequeño.
+          </p>
+        </div>
+        <div class="challenge-card">
+          <h3>💡 Desafío 5: Tu Propio Proyecto</h3>
+          <p>
+            ¿Tenés una idea? Creá un repositorio, escribí un buen README, y publicá tu código. 
+            No tiene que ser perfecto, tiene que existir.
+          </p>
+        </div>
+        <div class="challenge-card">
+          <h3>🤝 Desafío 6: Code Review</h3>
+          <p>
+            Pedí acceso de lectura a un repositorio y revisá el código de otros. 
+            No necesitás aprobar todo, con sugerir mejoras ya ayudás.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="documentation">
+      <h2>Documentación Importante</h2>
+      <p>
+        Recursos esenciales para tu día a día como desarrollador:
+      </p>
+      <div class="docs-grid">
+        <a href="https://developer.mozilla.org/" target="_blank" class="doc-card">
+          <h4>MDN Web Docs</h4>
+          <p>Documentación completa de HTML, CSS, JavaScript y APIs web</p>
+        </a>
+        <a href="https://docs.github.com/" target="_blank" class="doc-card">
+          <h4>GitHub Docs</h4>
+          <p>Todo sobre Git, GitHub y colaboración</p>
+        </a>
+        <a href="https://git-scm.com/doc" target="_blank" class="doc-card">
+          <h4>Git Docs</h4>
+          <p>Documentación oficial de Git</p>
+        </a>
+        <a href="https://devdocs.io/" target="_blank" class="doc-card">
+          <h4>DevDocs</h4>
+          <p>API documentation browser con búsqueda unificada</p>
+        </a>
+        <a href="https://hackterms.com/" target="_blank" class="doc-card">
+          <h4>HackTerms</h4>
+          <p>Diccionario de términos de programación</p>
+        </a>
+        <a href="https://stackoverflow.com/" target="_blank" class="doc-card">
+          <h4>Stack Overflow</h4>
+          <p>Preguntas y respuestas de la comunidad</p>
+        </a>
+      </div>
+    </section>
+
     <section class="quick-links">
-      <h2>Quick Links</h2>
+      <h2>Proyectos</h2>
       <div class="links-grid">
+        <a href="https://github.com/fingdev/fingdev.github.io" target="_blank" class="link-card">
+          <h4>fingdev.github.io</h4>
+          <p>Esta página web - El portal de la comunidad Fingdev</p>
+        </a>
         <a href="https://github.com/fingdev/fingcomms" target="_blank" class="link-card">
           <h4>fingcomms</h4>
-          <p>Group directory for Fing students</p>
+          <p>Directorio de grupos de estudiantes de Fing</p>
         </a>
         <a href="https://github.com/fingdev/fingdb" target="_blank" class="link-card">
           <h4>fingDB</h4>
-          <p>Central database with course info</p>
+          <p>Base de datos central con info de cursos</p>
         </a>
         <a href="https://github.com/fingdev/fingmap" target="_blank" class="link-card">
           <h4>fingmap</h4>
-          <p>Interactive campus map</p>
+          <p>Mapa interactivo del campus</p>
         </a>
       </div>
     </section>
@@ -191,6 +311,133 @@ export default {
   position: absolute;
   left: 0;
   color: var(--success);
+}
+
+.english-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.english-section h2 {
+  margin-bottom: 1rem;
+}
+
+.english-section > p {
+  margin-bottom: 1rem;
+}
+
+.english-reasons {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.english-reasons li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.english-reasons li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.english-tip {
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.challenges {
+  margin: 2rem 0;
+}
+
+.challenges h2 {
+  margin-bottom: 1rem;
+}
+
+.challenges > p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.challenge-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.challenge-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.challenge-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.challenge-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.documentation {
+  margin: 2rem 0;
+}
+
+.documentation h2 {
+  margin-bottom: 1rem;
+}
+
+.documentation > p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.doc-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.doc-card:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.doc-card h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.doc-card p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
 }
 
 .quick-links h2 {
