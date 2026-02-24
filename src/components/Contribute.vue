@@ -75,65 +75,54 @@
       <h2>Contribution Process</h2>
       <p>Follow these steps to make your first contribution:</p>
       
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="step-number">01</div>
-          <div class="step-body">
+      <div class="process-flow">
+        <div class="flow-row">
+          <div class="process-step">
+            <div class="step-number">01</div>
             <h4>Fork</h4>
-            <p>Click the "Fork" button on the project's GitHub page to create your own copy.</p>
+            <p>Click "Fork" on GitHub to create your own copy</p>
           </div>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">02</div>
-          <div class="step-body">
+          <div class="flow-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">02</div>
             <h4>Clone</h4>
-            <p>Download your fork:</p>
-            <code>git clone https://github.com/YOUR_USERNAME/project-name.git</code>
+            <p>Download your fork</p>
+            <code>git clone ...</code>
           </div>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">03</div>
-          <div class="step-body">
+          <div class="flow-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">03</div>
             <h4>Branch</h4>
-            <p>Create a new branch:</p>
-            <code>git checkout -b feature/your-feature</code>
+            <p>Create a new branch</p>
+            <code>git checkout -b ...</code>
           </div>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">04</div>
-          <div class="step-body">
+          <div class="flow-arrow">→</div>
+          <div class="process-step">
+            <div class="step-number">04</div>
             <h4>Edit</h4>
-            <p>Make your changes in the code and test them.</p>
+            <p>Make your changes</p>
           </div>
         </div>
         
-        <div class="process-step">
-          <div class="step-number">05</div>
-          <div class="step-body">
-            <h4>Commit</h4>
-            <p>Save your changes:</p>
-            <code>git add .
-git commit -m "feat: add new feature"</code>
+        <div class="flow-row reverse">
+          <div class="process-step">
+            <div class="step-number">07</div>
+            <h4>PR</h4>
+            <p>Create Pull Request on GitHub</p>
           </div>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">06</div>
-          <div class="step-body">
+          <div class="flow-arrow">←</div>
+          <div class="process-step">
+            <div class="step-number">06</div>
             <h4>Push</h4>
-            <p>Upload to GitHub:</p>
-            <code>git push origin feature/your-feature</code>
+            <p>Upload to GitHub</p>
+            <code>git push ...</code>
           </div>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-number">07</div>
-          <div class="step-body">
-            <h4>Pull Request</h4>
-            <p>Go to your fork and click "Create Pull Request". Fill in the template and submit!</p>
+          <div class="flow-arrow">←</div>
+          <div class="process-step">
+            <div class="step-number">05</div>
+            <h4>Commit</h4>
+            <p>Save changes</p>
+            <code>git commit -m "..."</code>
           </div>
         </div>
       </div>
@@ -314,6 +303,98 @@ a {
   margin: 0;
 }
 
+.process-flow {
+  margin-top: 2rem;
+}
+
+.flow-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.flow-row.reverse {
+  margin-top: 1.5rem;
+}
+
+.flow-arrow {
+  color: var(--primary);
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.process-step {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  min-width: 130px;
+  transition: all 0.2s;
+}
+
+.process-step:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.process-step .step-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.5;
+  margin-bottom: 0.25rem;
+}
+
+.process-step h4 {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.process-step p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.process-step code {
+  display: block;
+  background: var(--bg-tertiary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .flow-row {
+    gap: 0.5rem;
+  }
+  
+  .flow-arrow {
+    display: none;
+  }
+  
+  .process-step {
+    min-width: 45%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .flow-row.reverse {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .process-step {
+    min-width: 100%;
+  }
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -322,7 +403,7 @@ a {
   overflow-x: auto;
 }
 
-.process-step {
+.process-grid .process-step {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -334,32 +415,32 @@ a {
   transition: all 0.2s;
 }
 
-.process-step:hover {
+.process-grid .process-step:hover {
   border-color: var(--primary);
   transform: translateY(-3px);
 }
 
-.step-number {
+.process-grid .step-number {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
   opacity: 0.6;
 }
 
-.step-body h4 {
+.process-grid .step-body h4 {
   color: var(--text-primary);
   margin-bottom: 0.25rem;
   font-size: 0.95rem;
 }
 
-.step-body p {
+.process-grid .step-body p {
   font-size: 0.8rem;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
   line-height: 1.4;
 }
 
-.step-body code {
+.process-grid .step-body code {
   display: block;
   background: var(--bg-tertiary);
   padding: 0.4rem 0.6rem;
@@ -367,18 +448,6 @@ a {
   font-size: 0.7rem;
   white-space: pre;
   color: var(--primary);
-}
-
-@media (max-width: 1200px) {
-  .process-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .process-timeline {
