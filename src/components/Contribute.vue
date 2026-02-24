@@ -75,55 +75,69 @@
       <h2>Contribution Process</h2>
       <p>Follow these steps to make your first contribution:</p>
       
-      <div class="process-flow">
-        <div class="flow-row">
+      <div class="process-vertical">
+        <div class="step-with-arrow">
           <div class="process-step">
             <div class="step-number">01</div>
             <h4>Fork</h4>
             <p>Click "Fork" on GitHub to create your own copy</p>
           </div>
-          <div class="flow-arrow">→</div>
+          <div class="flow-arrow">↓</div>
+        </div>
+        
+        <div class="step-with-arrow">
           <div class="process-step">
             <div class="step-number">02</div>
             <h4>Clone</h4>
-            <p>Download your fork</p>
-            <code>git clone ...</code>
+            <p>Download your fork to local machine</p>
+            <code>git clone https://github.com/YOUR_USERNAME/project.git</code>
           </div>
-          <div class="flow-arrow">→</div>
+          <div class="flow-arrow">↓</div>
+        </div>
+        
+        <div class="step-with-arrow">
           <div class="process-step">
             <div class="step-number">03</div>
             <h4>Branch</h4>
-            <p>Create a new branch</p>
-            <code>git checkout -b ...</code>
+            <p>Create a new branch for your changes</p>
+            <code>git checkout -b feature/your-feature</code>
           </div>
-          <div class="flow-arrow">→</div>
+          <div class="flow-arrow">↓</div>
+        </div>
+        
+        <div class="step-with-arrow">
           <div class="process-step">
             <div class="step-number">04</div>
             <h4>Edit</h4>
-            <p>Make your changes</p>
+            <p>Make your changes in the code and test them</p>
           </div>
+          <div class="flow-arrow">↓</div>
         </div>
         
-        <div class="flow-row reverse">
-          <div class="process-step">
-            <div class="step-number">07</div>
-            <h4>PR</h4>
-            <p>Create Pull Request on GitHub</p>
-          </div>
-          <div class="flow-arrow">←</div>
-          <div class="process-step">
-            <div class="step-number">06</div>
-            <h4>Push</h4>
-            <p>Upload to GitHub</p>
-            <code>git push ...</code>
-          </div>
-          <div class="flow-arrow">←</div>
+        <div class="step-with-arrow">
           <div class="process-step">
             <div class="step-number">05</div>
             <h4>Commit</h4>
-            <p>Save changes</p>
-            <code>git commit -m "..."</code>
+            <p>Save your changes with a descriptive message</p>
+            <code>git add . && git commit -m "feat: add new feature"</code>
           </div>
+          <div class="flow-arrow">↓</div>
+        </div>
+        
+        <div class="step-with-arrow">
+          <div class="process-step">
+            <div class="step-number">06</div>
+            <h4>Push</h4>
+            <p>Upload your changes to GitHub</p>
+            <code>git push origin feature/your-feature</code>
+          </div>
+          <div class="flow-arrow">↓</div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">07</div>
+          <h4>Pull Request</h4>
+          <p>Go to your fork on GitHub and click "Create Pull Request". Fill in the template and submit!</p>
         </div>
       </div>
     </section>
@@ -303,36 +317,34 @@ a {
   margin: 0;
 }
 
-.process-flow {
+.process-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
   margin-top: 2rem;
 }
 
-.flow-row {
+.step-with-arrow {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-}
-
-.flow-row.reverse {
-  margin-top: 1.5rem;
 }
 
 .flow-arrow {
   color: var(--primary);
-  font-size: 2rem;
-  padding: 0 0.75rem;
+  font-size: 1.5rem;
+  padding: 0.25rem 0;
 }
 
 .process-step {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   text-align: center;
-  min-width: 180px;
-  max-width: 200px;
+  width: 100%;
+  max-width: 500px;
   transition: all 0.2s;
 }
 
@@ -351,12 +363,12 @@ a {
 
 .process-step h4 {
   color: var(--text-primary);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .process-step p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   margin-bottom: 0.75rem;
   line-height: 1.4;
@@ -367,37 +379,11 @@ a {
   background: var(--bg-tertiary);
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--primary);
   text-align: left;
   overflow-x: auto;
   white-space: pre;
-}
-
-@media (max-width: 1100px) {
-  .flow-row {
-    gap: 0.5rem;
-  }
-  
-  .flow-arrow {
-    display: none;
-  }
-  
-  .process-step {
-    min-width: 45%;
-    max-width: none;
-    margin-bottom: 0.75rem;
-  }
-  
-  .flow-row.reverse {
-    margin-top: 0.75rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .process-step {
-    min-width: 100%;
-  }
 }
 
 .process-grid {
