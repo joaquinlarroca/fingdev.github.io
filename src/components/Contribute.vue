@@ -321,17 +321,18 @@ a {
 
 .flow-arrow {
   color: var(--primary);
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
+  font-size: 2rem;
+  padding: 0 0.75rem;
 }
 
 .process-step {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
-  min-width: 130px;
+  min-width: 180px;
+  max-width: 200px;
   transition: all 0.2s;
 }
 
@@ -341,36 +342,39 @@ a {
 }
 
 .process-step .step-number {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
-  opacity: 0.5;
-  margin-bottom: 0.25rem;
+  opacity: 0.4;
+  margin-bottom: 0.5rem;
 }
 
 .process-step h4 {
   color: var(--text-primary);
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .process-step p {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  margin-bottom: 0.25rem;
-  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
 }
 
 .process-step code {
   display: block;
   background: var(--bg-tertiary);
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--primary);
+  text-align: left;
+  overflow-x: auto;
+  white-space: pre;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .flow-row {
     gap: 0.5rem;
   }
@@ -381,11 +385,12 @@ a {
   
   .process-step {
     min-width: 45%;
-    margin-bottom: 0.5rem;
+    max-width: none;
+    margin-bottom: 0.75rem;
   }
   
   .flow-row.reverse {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
   }
 }
 
