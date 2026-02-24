@@ -51,16 +51,103 @@
       </ul>
     </section>
 
+    <section class="installation">
+      <h2>Installing Git</h2>
+      
+      <div class="install-group">
+        <h3>Debian-based (Ubuntu, Debian, Linux Mint)</h3>
+        <div class="code-block">
+          <code>sudo apt update
+sudo apt install git</code>
+        </div>
+      </div>
+
+      <div class="install-group">
+        <h3>Arch-based (Arch Linux, Manjaro, EndeavourOS)</h3>
+        <div class="code-block">
+          <code>sudo pacman -S git</code>
+        </div>
+      </div>
+
+      <div class="install-group">
+        <h3>Fedora</h3>
+        <div class="code-block">
+          <code>sudo dnf install git</code>
+        </div>
+      </div>
+
+      <div class="install-group">
+        <h3>Verify Installation</h3>
+        <div class="code-block">
+          <code>git --version</code>
+        </div>
+      </div>
+
+      <div class="install-group">
+        <h3>Configure Git</h3>
+        <div class="code-block">
+          <code>git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="ssh-setup">
+      <h2>SSH Key Setup (Mandatory for Contributing)</h2>
+      <p class="warning">
+        An SSH key is <strong>required</strong> to contribute to our repositories. It allows secure authentication without entering your password every time.
+      </p>
+
+      <div class="install-group">
+        <h3>Linux</h3>
+        <div class="code-block">
+          <code>ssh-keygen -t ed25519 -C "your.email@example.com"</code>
+        </div>
+        <p>Press Enter to accept default location. Optionally add a passphrase.</p>
+      </div>
+
+      <div class="install-group">
+        <h3>Windows (Git Bash or WSL)</h3>
+        <div class="code-block">
+          <code>ssh-keygen -t ed25519 -C "your.email@example.com"</code>
+        </div>
+      </div>
+
+      <div class="install-group">
+        <h3>Add Key to SSH Agent</h3>
+        <div class="code-block">
+          <code>eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519</code>
+        </div>
+      </div>
+
+      <div class="install-group">
+        <h3>Add Public Key to GitHub</h3>
+        <ol class="steps-list">
+          <li>Copy your public key:</li>
+          <div class="code-block">
+            <code>cat ~/.ssh/id_ed25519.pub</code>
+          </div>
+          <li>Go to GitHub → Settings → SSH and GPG keys → New SSH key</li>
+          <li>Paste the key and save</li>
+        </ol>
+      </div>
+
+      <div class="install-group">
+        <h3>Test Connection</h3>
+        <div class="code-block">
+          <code>ssh -T git@github.com</code>
+        </div>
+      </div>
+    </section>
+
     <section class="basic-commands">
       <h2>Basic Git Commands</h2>
       
       <div class="command-group">
         <h3>1. Starting a Project</h3>
         <div class="code-block">
-          <code># Clone an existing repository (download from GitHub)
-git clone https://github.com/username/repository.git
-
-# Initialize a new repository locally
+          <code>git clone https://github.com/username/repository.git
 git init</code>
         </div>
       </div>
@@ -68,19 +155,10 @@ git init</code>
       <div class="command-group">
         <h3>2. Making Changes</h3>
         <div class="code-block">
-          <code># Check status of your changes
-git status
-
-# See what changed
+          <code>git status
 git diff
-
-# Stage a specific file
 git add filename.py
-
-# Stage all changes
 git add .
-
-# Commit your changes (save a snapshot)
 git commit -m "Description of what you changed"</code>
         </div>
       </div>
@@ -88,16 +166,9 @@ git commit -m "Description of what you changed"</code>
       <div class="command-group">
         <h3>3. Working with Branches</h3>
         <div class="code-block">
-          <code># Create a new branch
-git checkout -b feature/my-new-feature
-
-# Switch to an existing branch
+          <code>git checkout -b feature/my-new-feature
 git checkout branch-name
-
-# List all branches
 git branch
-
-# Delete a branch
 git branch -d branch-name</code>
         </div>
       </div>
@@ -105,13 +176,8 @@ git branch -d branch-name</code>
       <div class="command-group">
         <h3>4. Syncing with GitHub</h3>
         <div class="code-block">
-          <code># Push your commits to GitHub
-git push origin branch-name
-
-# Pull latest changes from GitHub
+          <code>git push origin branch-name
 git pull origin branch-name
-
-# Upload a new branch to GitHub
 git push -u origin branch-name</code>
         </div>
       </div>
@@ -403,10 +469,53 @@ p {
   font-size: 0.85rem;
 }
 
-.resource-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+.installation {
+  margin-bottom: 3rem;
+}
+
+.install-group {
+  margin-bottom: 1.5rem;
+}
+
+.install-group h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.install-group p {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.ssh-setup {
+  margin-bottom: 3rem;
+}
+
+.ssh-setup .warning {
+  background: var(--bg-secondary);
+  border: 1px solid var(--warning);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.ssh-setup .warning strong {
+  color: var(--warning);
+}
+
+.steps-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.steps-list li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+.steps-list .code-block {
+  margin: 0.5rem 0;
 }
 
 .resource-card {
