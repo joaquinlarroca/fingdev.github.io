@@ -1,0 +1,326 @@
+<template>
+  <div class="signing-page">
+    <h1>Signed Commits</h1>
+    <p class="intro">
+      Learn why signed commits are mandatory and how to set them up.
+    </p>
+
+    <section class="why-signed">
+      <h2>Why Signed Commits?</h2>
+      <p>
+        Signed commits are a security measure that verifies the authenticity of your commits.
+        When you sign a commit, you're cryptographically proving that you (and not someone else) made those changes.
+      </p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="benefit-icon">🔒</span>
+          <h3>Security</h3>
+          <p>Verifies that you are who you claim to be. Prevents impersonation attacks.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🛡️</span>
+          <h3>Integrity</h3>
+          <p>Guarantees the commit wasn't modified after you created it.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🤝</span>
+          <h3>Trust</h3>
+          <p>Other contributors know changes genuinely come from you.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">📈</span>
+          <h3>Professionalism</h3>
+          <p>Industry best practice for open source projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="verification-status">
+      <h2>What Happens Without Signed Commits?</h2>
+      <div class="status-info">
+        <div class="status-item warning">
+          <span class="status-icon">⚠️</span>
+          <div>
+            <h4>Unverified Commits</h4>
+            <p>Commits without signatures show as "Unverified" on GitHub, making it hard to trust the source.</p>
+          </div>
+        </div>
+        <div class="status-item danger">
+          <span class="status-icon">🚫</span>
+          <div>
+            <h4>Rejected Pull Requests</h4>
+            <p>Repositories with signed commit requirements will reject unsigned commits.</p>
+          </div>
+        </div>
+        <div class="status-item success">
+          <span class="status-icon">✅</span>
+          <div>
+            <h4>Verified Commits</h4>
+            <p>Signed commits show a "Verified" badge, building trust with maintainers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="setup-guide">
+      <h2>Setup Your SSH Key</h2>
+      <p>Follow these steps to set up signed commits:</p>
+
+      <div class="step-group">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Generate SSH Key</h4>
+            <div class="code-block">
+              <code>ssh-keygen -t ed25519 -C "your.email@example.com"</code>
+            </div>
+            <p>Press Enter to accept the default location. Optionally add a passphrase for extra security.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Start SSH Agent</h4>
+            <div class="code-block">
+              <code>eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Add Public Key to GitHub</h4>
+            <div class="code-block">
+              <code>cat ~/.ssh/id_ed25519.pub</code>
+            </div>
+            <p>Copy the output and go to GitHub → Settings → SSH and GPG keys → New SSH key.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Configure Git</h4>
+            <div class="code-block">
+              <code>git config --global commit.gpgsign true</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Test Your Setup</h4>
+            <div class="code-block">
+              <code>ssh -T git@github.com</code>
+            </div>
+            <p>You should see a message confirming your connection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="verification">
+      <h2>Verifying Your Commits</h2>
+      <p>After setting up, your commits will show a "Verified" badge on GitHub.</p>
+      
+      <div class="code-block">
+        <code>git log --show-signature</code>
+      </div>
+      <p>Run this command locally to see signature verification details.</p>
+    </section>
+
+    <section class="help">
+      <h2>Need Help?</h2>
+      <p>If you encounter issues setting up signed commits, check:</p>
+      <ul class="help-list">
+        <li>GitHub's <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification" target="_blank">official documentation</a></li>
+        <li>Our <router-link to="/git">Git Guide</router-link></li>
+        <li>Open an issue on the relevant repository</li>
+      </ul>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Signing'
+}
+</script>
+
+<style scoped>
+.signing-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #58a6ff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.benefit-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.status-info {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.status-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.status-item.warning {
+  background: rgba(210, 153, 34, 0.1);
+  border-color: var(--warning);
+}
+
+.status-item.danger {
+  background: rgba(248, 81, 73, 0.1);
+  border-color: #f85149;
+}
+
+.status-item.success {
+  background: rgba(63, 185, 80, 0.1);
+  border-color: var(--success);
+}
+
+.status-icon {
+  font-size: 1.5rem;
+}
+
+.status-item h4 {
+  margin-bottom: 0.5rem;
+}
+
+.status-item p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.step-group {
+  margin-top: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  margin-bottom: 0.75rem;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.code-block {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  white-space: pre;
+}
+
+.help-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.help-list li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+.help-list a {
+  color: var(--primary);
+}
+</style>
