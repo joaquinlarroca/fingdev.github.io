@@ -222,8 +222,8 @@ section {
 }
 
 .deepwiki-intro {
-  background: linear-gradient(135deg, #1e1b4b, #312e81);
-  border: 1px solid #6366f1;
+  background: linear-gradient(135deg, #0f172a, #1e3a5f);
+  border: 1px solid #0ea5e9;
   border-radius: 16px;
   padding: 2rem;
 }
@@ -240,7 +240,7 @@ section {
 }
 
 .deepwiki-intro h2 {
-  color: white;
+  color: #38bdf8;
   border: none;
   padding: 0;
   margin: 0;
@@ -256,7 +256,7 @@ section {
 }
 
 .deepwiki-link {
-  color: #a5b4fc;
+  color: #38bdf8;
   font-weight: 600;
 }
 
@@ -265,16 +265,16 @@ section {
 }
 
 .deepwiki-example {
-  background: rgba(99, 102, 241, 0.2);
+  background: rgba(14, 165, 233, 0.15);
   border-radius: 8px;
   padding: 1rem;
-  border-left: 3px solid #a5b4fc;
+  border-left: 3px solid #38bdf8;
 }
 
 .deepwiki-example .example-label {
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #a5b4fc;
+  color: #38bdf8;
   font-weight: 600;
   display: block;
   margin-bottom: 0.5rem;
@@ -509,5 +509,59 @@ h2 {
   color: var(--text-secondary);
   font-size: 0.85rem;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .how-to-learn h1 {
+    font-size: 1.75rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .philosophy,
+  .phase,
+  .getting-started {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .phase-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .phase-number {
+    font-size: 1.5rem;
+  }
+  
+  .phase-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .reasons li {
+    padding-left: 1.5rem;
+  }
+  
+  .priority-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .priority {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  
+  .start-options {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

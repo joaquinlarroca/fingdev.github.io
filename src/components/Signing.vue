@@ -12,7 +12,7 @@
         When you sign a commit, you're cryptographically proving that you (and not someone else) made those changes.
       </p>
       
-      <div class="benefits-grid">
+      <div class="benefits-row">
         <div class="benefit-card">
           <span class="benefit-icon">🔒</span>
           <h3>Security</h3>
@@ -23,6 +23,9 @@
           <h3>Integrity</h3>
           <p>Guarantees the commit wasn't modified after you created it.</p>
         </div>
+      </div>
+      
+      <div class="benefits-row three-cols">
         <div class="benefit-card">
           <span class="benefit-icon">⚖️</span>
           <h3>Legal Protection</h3>
@@ -46,7 +49,7 @@
       <p>
         Signed commits provide important legal protections for both contributors and project maintainers:
       </p>
-      <div class="legal-grid">
+      <div class="legal-row">
         <div class="legal-item">
           <h4>🔐 Attribution Proof</h4>
           <p>Cryptographic signature proves who wrote or contributed specific code, establishing clear authorship.</p>
@@ -55,6 +58,8 @@
           <h4>📜 License Compliance</h4>
           <p>For projects with specific licenses (MIT, GPL, etc.), signed commits help track who contributed under what terms.</p>
         </div>
+      </div>
+      <div class="legal-row">
         <div class="legal-item">
           <h4>⚖️ Liability Defense</h4>
           <p>In case of legal disputes, signed commits provide evidence of good-faith contribution practices.</p>
@@ -217,11 +222,15 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-.benefits-grid {
+.benefits-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   margin-top: 1.5rem;
+}
+
+.benefits-row.three-cols {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .benefit-card {
@@ -233,20 +242,29 @@ h2 {
 }
 
 .benefit-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .benefit-card h3 {
   color: var(--primary);
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .benefit-card p {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0;
+  line-height: 1.4;
+}
+
+.legal-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .status-info {

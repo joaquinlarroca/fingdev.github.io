@@ -605,4 +605,73 @@ a {
   margin: 0;
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .step {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  
+  .process-vertical {
+    padding: 0 1rem;
+  }
+  
+  .process-step {
+    padding: 1.25rem 1rem;
+  }
+  
+  .process-step h4 {
+    font-size: 1rem;
+  }
+  
+  .process-step code {
+    font-size: 0.75rem;
+  }
+  
+  .flow-arrow {
+    font-size: 1.25rem;
+  }
+  
+  .guidelines {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .guideline-section {
+    padding: 0;
+  }
+  
+  .question-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .signed-warning {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contribute h1 {
+    font-size: 1.75rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+}
 </style>

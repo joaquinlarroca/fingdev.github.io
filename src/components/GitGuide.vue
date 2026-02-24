@@ -564,4 +564,64 @@ p {
   margin: 0;
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .git-guide h1 {
+    font-size: 1.75rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 0 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  .key-points {
+    grid-template-columns: 1fr;
+  }
+  
+  .code-block {
+    padding: 1rem;
+    font-size: 0.85rem;
+    overflow-x: auto;
+  }
+  
+  .step {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .commit-types {
+    font-size: 0.85rem;
+  }
+  
+  .commit-types th,
+  .commit-types td {
+    padding: 0.5rem;
+  }
+  
+  .resource-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .install-group {
+    padding: 0 1rem;
+  }
+}
 </style>

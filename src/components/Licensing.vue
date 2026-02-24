@@ -105,6 +105,38 @@
         </div>
       </div>
 
+      <div class="license-card agpl">
+        <div class="license-header">
+          <h3>AGPLv3</h3>
+          <span class="license-badge">Strong Copyleft</span>
+        </div>
+        <p>Similar to GPL but includes a clause for network use. If you use the software as a service, you must make source code available to users.</p>
+        <div class="license-pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>Covers network use (SaaS)</li>
+              <li>Strongest copyleft protection</li>
+              <li>Ensures source available even for services</li>
+              <li>Protects against "as-a-service" loopholes</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>Very restrictive</li>
+              <li>Complex and lengthy license</li>
+              <li>Many companies avoid it</li>
+              <li>May limit adoption</li>
+            </ul>
+          </div>
+        </div>
+        <div class="license-use">
+          <h4>Best for:</h4>
+          <p>Projects where you want to prevent others from offering your software as a service without sharing modifications.</p>
+        </div>
+      </div>
+
       <div class="license-card bsd">
         <div class="license-header">
           <h3>BSD 3-Clause</h3>
@@ -198,6 +230,13 @@
               <td>✅</td>
               <td>✅</td>
               <td>✅</td>
+              <td>✅ (strong)</td>
+            </tr>
+            <tr>
+              <td>AGPLv3</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>❌ (must share)</td>
               <td>✅ (strong)</td>
             </tr>
             <tr>
@@ -298,6 +337,10 @@ h2 {
 
 .license-card.bsd {
   border-left: 4px solid #3fb950;
+}
+
+.license-card.agpl {
+  border-left: 4px solid #f778ba;
 }
 
 .license-card.cc0 {
@@ -459,8 +502,41 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .licensing-page h1 {
+    font-size: 1.75rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 1rem 1rem;
+  }
+  
   .license-pros-cons {
     grid-template-columns: 1fr;
+  }
+  
+  .license-card {
+    margin: 0 1rem 1rem;
+    padding: 1.25rem;
+  }
+  
+  .license-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.5rem;
   }
 }
 </style>

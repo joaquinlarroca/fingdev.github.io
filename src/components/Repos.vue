@@ -252,4 +252,58 @@ export default {
   background: #4f46e5;
   border-color: #4f46e5;
 }
+
+@media (max-width: 768px) {
+  .repos h1 {
+    font-size: 1.75rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .repo-card {
+    padding: 1.25rem;
+  }
+  
+  .repo-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .repo-icon {
+    font-size: 2rem;
+  }
+  
+  .repo-header h3 {
+    font-size: 1.25rem;
+  }
+  
+  .repo-description {
+    font-size: 1rem;
+  }
+  
+  .repo-tech {
+    gap: 0.4rem;
+  }
+  
+  .tech-badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .repo-features ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .repo-links {
+    flex-direction: column;
+  }
+  
+  .repo-link {
+    justify-content: center;
+  }
+}
 </style>

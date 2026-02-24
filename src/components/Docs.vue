@@ -209,4 +209,22 @@ h1 {
   font-size: 0.9rem;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .docs-page h1 {
+    font-size: 1.75rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  .docs-category h2 {
+    font-size: 1.25rem;
+  }
+  
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

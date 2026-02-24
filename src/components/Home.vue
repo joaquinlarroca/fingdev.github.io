@@ -443,8 +443,75 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .mission {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .english-section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .docs-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .feature-card,
+  .challenge-card,
+  .doc-card,
+  .link-card {
+    padding: 1rem;
   }
 }
 </style>

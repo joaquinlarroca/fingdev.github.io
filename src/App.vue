@@ -211,16 +211,49 @@ body {
   .nav-container {
     flex-direction: column;
     gap: 1rem;
+    padding: 0 1rem 1rem;
   }
   
   .nav-links {
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   
+  .nav-links a,
+  .dropdown-trigger {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 160px;
+  }
+  
   .main-content {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.5rem;
+  }
+  
+  .nav-links a,
+  .dropdown-trigger {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.5rem;
   }
 }
 </style>
