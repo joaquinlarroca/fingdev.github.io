@@ -36,6 +36,20 @@
     </section>
 
     <section class="docs-category">
+      <h2>Commit Signing</h2>
+      <div class="docs-grid">
+        <router-link to="/docs/signing" class="doc-card">
+          <h4>Signed Commits Guide</h4>
+          <p>Learn why signed commits are mandatory and how to set them up</p>
+        </router-link>
+        <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification" target="_blank" class="doc-card">
+          <h4>GitHub Verification Docs</h4>
+          <p>Official GitHub documentation on commit signature verification</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="docs-category">
       <h2>API & Reference</h2>
       <div class="docs-grid">
         <a href="https://devdocs.io/" target="_blank" class="doc-card">
