@@ -518,6 +518,12 @@ p {
   margin: 0.5rem 0;
 }
 
+.resource-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
 .resource-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
