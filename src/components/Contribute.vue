@@ -75,65 +75,65 @@
       <h2>Contribution Process</h2>
       <p>Follow these steps to make your first contribution:</p>
       
-      <div class="process-timeline">
+      <div class="process-grid">
         <div class="process-step">
-          <div class="step-icon">1</div>
-          <div class="step-content">
+          <div class="step-number">01</div>
+          <div class="step-body">
             <h4>Fork</h4>
             <p>Click the "Fork" button on the project's GitHub page to create your own copy.</p>
           </div>
         </div>
         
         <div class="process-step">
-          <div class="step-icon">2</div>
-          <div class="step-content">
+          <div class="step-number">02</div>
+          <div class="step-body">
             <h4>Clone</h4>
-            <p>Download your fork to your computer:</p>
+            <p>Download your fork:</p>
             <code>git clone https://github.com/YOUR_USERNAME/project-name.git</code>
           </div>
         </div>
         
         <div class="process-step">
-          <div class="step-icon">3</div>
-          <div class="step-content">
+          <div class="step-number">03</div>
+          <div class="step-body">
             <h4>Branch</h4>
-            <p>Create a new branch for your changes:</p>
-            <code>git checkout -b feature/your-feature-name</code>
+            <p>Create a new branch:</p>
+            <code>git checkout -b feature/your-feature</code>
           </div>
         </div>
         
         <div class="process-step">
-          <div class="step-icon">4</div>
-          <div class="step-content">
+          <div class="step-number">04</div>
+          <div class="step-body">
             <h4>Edit</h4>
-            <p>Make your changes in the code. Don't forget to test!</p>
+            <p>Make your changes in the code and test them.</p>
           </div>
         </div>
         
         <div class="process-step">
-          <div class="step-icon">5</div>
-          <div class="step-content">
+          <div class="step-number">05</div>
+          <div class="step-body">
             <h4>Commit</h4>
-            <p>Save your changes with a descriptive message:</p>
+            <p>Save your changes:</p>
             <code>git add .
 git commit -m "feat: add new feature"</code>
           </div>
         </div>
         
         <div class="process-step">
-          <div class="step-icon">6</div>
-          <div class="step-content">
+          <div class="step-number">06</div>
+          <div class="step-body">
             <h4>Push</h4>
-            <p>Upload your changes to GitHub:</p>
-            <code>git push origin feature/your-feature-name</code>
+            <p>Upload to GitHub:</p>
+            <code>git push origin feature/your-feature</code>
           </div>
         </div>
         
         <div class="process-step">
-          <div class="step-icon">7</div>
-          <div class="step-content">
+          <div class="step-number">07</div>
+          <div class="step-body">
             <h4>Pull Request</h4>
-            <p>Go to your fork on GitHub and click "Create Pull Request". Fill in the template and submit!</p>
+            <p>Go to your fork and click "Create Pull Request". Fill in the template and submit!</p>
           </div>
         </div>
       </div>
@@ -314,58 +314,78 @@ a {
   margin: 0;
 }
 
-.process-timeline {
+.process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.75rem;
+  margin-top: 2rem;
+  overflow-x: auto;
 }
 
 .process-step {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 140px;
   transition: all 0.2s;
 }
 
 .process-step:hover {
   border-color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-.step-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--primary);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.step-number {
+  font-size: 1.5rem;
   font-weight: 700;
-  flex-shrink: 0;
-}
-
-.step-content h4 {
   color: var(--primary);
-  margin-bottom: 0.5rem;
+  opacity: 0.6;
 }
 
-.step-content p {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+.step-body h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
 }
 
-.step-content code {
+.step-body p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.step-body code {
   display: block;
   background: var(--bg-tertiary);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.8rem;
-  white-space: pre-wrap;
+  font-size: 0.7rem;
+  white-space: pre;
+  color: var(--primary);
+}
+
+@media (max-width: 1200px) {
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .process-step-old {
