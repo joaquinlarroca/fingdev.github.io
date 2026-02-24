@@ -44,6 +44,20 @@ export default {
     return {
       repos: [
         {
+          name: 'fingdev.github.io',
+          icon: '🌐',
+          description: 'The official Fingdev community portal. This website you are visiting right now.',
+          tech: ['Vue.js 3', 'Vue Router', 'Vite', 'JavaScript'],
+          features: [
+            'Community portal',
+            'Git & GitHub guide',
+            'Documentation resources',
+            'Contribution guide'
+          ],
+          github: 'https://github.com/fingdev/fingdev.github.io',
+          demo: 'https://fingdev.github.io'
+        },
+        {
           name: 'fingcomms',
           icon: '👥',
           description: 'A directory for student groups and study partners at the Faculty of Engineering.',
