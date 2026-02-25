@@ -1,8 +1,8 @@
-# Contributor License Agreement (CLA)
+# Contributor License Agreement (CLA) - Version 1
 
 Fingdev
 
-Última actualización: 24 de Febrero de 2026
+Última actualización: 24 de Febrero de 2026 (Versión 1)
 
 ## 1. Naturaleza del Proyecto
 
