@@ -41,6 +41,11 @@
         <p><strong>Important:</strong> Before contributing, read and make sure you agree with the license of the repository you want to contribute to. Each project has its own license that defines how you can use, modify, and distribute the code. You can find it in the LICENSE file in the repository.</p>
       </div>
       
+      <div class="cla-note">
+        <span class="note-icon">📋</span>
+        <p><strong>Required:</strong> You must accept our <router-link to="/CLA">Contributor License Agreement (CLA)</router-link>. By submitting a Pull Request with cryptographically signed commits, you acknowledge and agree to the CLA terms. All commits must be signed with GPG.</p>
+      </div>
+      
       <div class="steps">
         <div class="step">
           <div class="step-header">
@@ -271,7 +276,31 @@ section {
   border: 1px solid var(--primary);
   border-radius: 12px;
   padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.cla-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid #f85149;
+  border-radius: 12px;
+  padding: 1.25rem;
   margin-bottom: 1.5rem;
+}
+
+.cla-note p {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cla-note a {
+  color: #f85149;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .note-icon {

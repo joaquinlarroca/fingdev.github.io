@@ -10,6 +10,7 @@ import Signing from './components/Signing.vue'
 import HowToLearn from './components/HowToLearn.vue'
 import Licensing from './components/Licensing.vue'
 import Linux from './components/Linux.vue'
+import CLA from './components/CLA.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -20,12 +21,16 @@ const routes = [
   { path: '/contribute', component: Contribute },
   { path: '/docs', component: Docs },
   { path: '/docs/signing', component: Signing },
-  { path: '/docs/licensing', component: Licensing }
+  { path: '/docs/licensing', component: Licensing },
+  { path: '/CLA', component: CLA }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
 
 createApp(App).use(router).mount('#app')
